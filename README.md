@@ -1,5 +1,7 @@
 # API GOUV ANGULAR (Exercice sur l'API des régions)
 
+![api-gouv-sample](https://user-images.githubusercontent.com/79519650/179372472-fdabea12-d9ae-4677-b55d-6112022d9362.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
 
 ## Development server
