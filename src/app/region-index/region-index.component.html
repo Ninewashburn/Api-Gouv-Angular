@@ -1,0 +1,25 @@
+<table class="table table-striped">
+  <thead>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item mt-5" aria-current="page">Region</li>
+    </ol>
+  </nav>
+  <tr>
+    <th>Nom</th>
+    <th>Code</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let region of regions" (click)="routerLinkDepartment(region.code)"
+      class="click-tr"
+  >
+    <td>
+      {{region.nom}}
+    </td>
+    <td>
+      {{region.code}}
+    </td>
+  </tr>
+  </tbody>
+</table>

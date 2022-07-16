@@ -1,0 +1,87 @@
+body {
+  background-color: $main-background-color;
+  font-size: $font-size;
+}
+
+button {
+  background-color: $button-background-color-l-40;
+  border: $border-button;
+  padding: 0.25em 0.8em;
+  cursor: pointer;
+  border-radius: 0.3em;
+  width: 100%;
+
+  &:hover {
+    background-color: lightseagreen;
+    color: $main-background-color;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.compteur {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.lowPoints {
+  background-color: coral;
+  color: $main-background-color;
+}
+
+.highPoints {
+  background-color: darkgreen;
+  color: $main-background-color;
+}
+
+.container-compteur {
+  display: flex;
+}
+
+.col-20 {
+  width: 20%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+
+  thead > tr > th {
+    border-bottom: $border-button;
+  }
+
+  tbody > tr > td {
+    border-bottom: $border-button;
+  }
+}
+
+.isActive {
+  border: $border-button;
+}
+
+.click-tr {
+  cursor: cell;
+
+  &:hover {
+    background-color: $light-red;
+  }
+}
+
+.icons {
+  color: black;
+
+  &:hover {
+    fa-icon {
+      color: antiquewhite;
+    }
+  }
+}
+

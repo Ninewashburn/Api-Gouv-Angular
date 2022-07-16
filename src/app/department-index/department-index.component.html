@@ -1,0 +1,41 @@
+<table class="table table-striped">
+  <thead>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb mt-5">
+      <li class="breadcrumb-item"><a routerLink="/">Regions</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{region?.nom}} - Departements</li>
+    </ol>
+  </nav>
+  <tr>
+    <th>Nom</th>
+    <th>Code</th>
+    <th>Code région</th>
+  </tr>
+  </thead>
+  <tbody *ngIf="departments.length > 0; else noDepartments">
+  <tr *ngFor="let department of departments"
+      (click)="routerLinkCity(department.codeRegion, department.code)"
+      class="click-tr"
+  >
+    <td>
+      {{department.nom}}
+    </td>
+    <td>
+      {{department.code}}
+    </td>
+    <td>
+      {{department.codeRegion}}
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<ng-template #noDepartments>
+  <td colspan="3">Aucun département pour la région</td>
+</ng-template>
+
+<ng-template #emptyRegion>
+  <h2>Région inconnue</h2>
+</ng-template>
+
+

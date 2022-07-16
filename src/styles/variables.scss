@@ -1,0 +1,17 @@
+$main-background-color: antiquewhite;
+$font-color-white: #dbdbdb;
+$light-green: #4af778;
+$default-green: #00ff44;
+$dark-green: #009c29;
+$light-red: #c23844;
+$default-red: #ff0016;
+$dark-red: #ab000f;
+$default-teal: teal;
+$border-button-color: #ff0080;
+$main-yellow: yellow;
+
+$border-button-color-d25: darken($border-button-color, 25%);
+$button-background-color-l-40: lighten($border-button-color, 40%);
+$border-button: 0.08em solid $border-button-color-d25;
+
+$font-size: 16px;

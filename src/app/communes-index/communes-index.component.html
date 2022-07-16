@@ -1,0 +1,57 @@
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb mt-5">
+    <li class="breadcrumb-item" aria-current="page"><a routerLink="/">Regions</a></li>
+    <li class="breadcrumb-item">
+      <a href="/regions/{{region?.code}}/departments">
+        {{region?.nom}} - Départements
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">{{department?.nom}} - Communes</li>
+  </ol>
+</nav>
+
+<table *ngIf="department; else noDepartment"
+       class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Code</th>
+      <th>Département</th>
+      <th>Code postaux</th>
+      <th>Population</th>
+    </tr>
+  </thead>
+
+  <tbody *ngIf="communes.length > 0; else noCommunes">
+  <tr *ngFor="let commune of communes"
+      class="click-tr"
+  >
+    <td>
+      {{commune.nom}}
+    </td>
+    <td>
+      {{commune.code}}
+    </td>
+    <td>
+      {{commune.codeDepartement}}
+    </td>
+    <td>
+        <span *ngFor="let postalCode of commune.codesPostaux">
+          {{postalCode}}
+        </span>
+    </td>
+    <td>
+      {{commune.population}}
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<ng-template #noDepartment>
+  <p>Ce code de département n'existe pas</p>
+</ng-template>
+
+<ng-template #noCommunes>
+  <td colspan="5">Aucune ville n'a été trouvé pour ce département</td>
+</ng-template>
